@@ -1,6 +1,7 @@
 using System;
 using DarkMultiPlayerServer;
 using DarkMultiPlayerCommon;
+using ExamplePluginLogic;
 
 namespace ExampleDMPPlugin
 {
@@ -12,6 +13,11 @@ namespace ExampleDMPPlugin
         public ExampleDMPPlugin()
         {
             DarkLog.Debug("ExampleDMPPlugin instantated!");
+            int numbera = 6;
+            int numberb = 7;
+            ExamplePluginLogicMain eplm = new ExamplePluginLogicMain();
+            DarkLog.Debug("Doing something magic with the numbers " + numbera + " and " + numberb + ", the result was " + eplm.DoSomethingMagicWithTwoNumbers(numbera, numberb));
+
         }
 
         public void Update()

@@ -1,5 +1,6 @@
-ExampleDMPPlugin/bin/
-ExampleDMPPlugin/obj/
-ExampleDMPPlugin.userprefs
+[Bb]in/
+[Oo]bj/
+*.userprefs
 *.dll
 *.exe
+*.orig
