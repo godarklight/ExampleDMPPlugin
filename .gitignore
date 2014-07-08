@@ -3,4 +3,6 @@
 *.userprefs
 *.dll
 *.exe
+*.suo
+*.dll
 *.orig
