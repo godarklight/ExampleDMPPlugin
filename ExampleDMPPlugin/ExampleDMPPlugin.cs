@@ -5,8 +5,7 @@ using ExamplePluginLogic;
 
 namespace ExampleDMPPlugin
 {
-    [DMPPlugin]
-    public class ExampleDMPPlugin
+    public class ExampleDMPPlugin : DMPPlugin
     {
         private int updateCallCount = 0;
 
@@ -20,27 +19,27 @@ namespace ExampleDMPPlugin
 
         }
 
-        public void Update()
+        public override void OnUpdate()
         {
             updateCallCount++;
         }
 
-        public void OnClientConnect(ClientObject client)
+        public override void OnClientConnect(ClientObject client)
         {
             DarkLog.Debug("[ExamplePluginTest] somebody connected with the server");
         }
 
-        public void OnClientAuthenticated(ClientObject client)
+        public override void OnClientAuthenticated(ClientObject client)
         {
             DarkLog.Debug("[ExamplePluginTest] " + client.playerName + " authenticated with the server");
         }
 
-        public void OnClientDisconnect(ClientObject client)
+        public override void OnClientDisconnect(ClientObject client)
         {
             DarkLog.Debug("[ExamplePluginTest] " + client.playerName + " disconnected from the server");
         }
 
-        public void OnMessageReceived(ClientObject client, ClientMessage message)
+        public override void OnMessageReceived(ClientObject client, ClientMessage message)
         {
             DarkLog.Debug("[ExamplePluginTest] " + "Got a " + message.type.ToString() + " message from " + client.playerName);
         }
