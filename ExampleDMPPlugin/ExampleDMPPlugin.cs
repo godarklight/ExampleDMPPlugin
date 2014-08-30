@@ -16,7 +16,6 @@ namespace ExampleDMPPlugin
             int numberb = 7;
             ExamplePluginLogicMain eplm = new ExamplePluginLogicMain();
             DarkLog.Debug("Doing something magic with the numbers " + numbera + " and " + numberb + ", the result was " + eplm.DoSomethingMagicWithTwoNumbers(numbera, numberb));
-
         }
 
         public override void OnUpdate()
